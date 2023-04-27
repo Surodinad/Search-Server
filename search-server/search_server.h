@@ -123,7 +123,7 @@ SearchServer::SearchServer(const StringContainer& stop_words)
 }
 
 template<typename ExecutionPolicy, typename Predicate>
-std::vector<Document> SearchServer::FindTopDocuments(const ExecutionPolicy& policy, std::string_view raw_query, Predicate predicate) const { //Не сразу понял, почему-то думал, что нельзя шаблонный параметр передать в алгоритм из stl =)
+std::vector<Document> SearchServer::FindTopDocuments(const ExecutionPolicy& policy, std::string_view raw_query, Predicate predicate) const {
     const Query query = ParseQuery(raw_query);
     auto matched_documents = FindAllDocuments(policy, query, predicate);
 

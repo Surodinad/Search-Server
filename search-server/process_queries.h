@@ -2,9 +2,9 @@
 
 #include "search_server.h"
 
-#include <cassert> //Можно добавить assert'ы для инкремента и разыменования. На данный момент DoubleVector рассчитан только для range-based for
+#include <cassert>
 
-class DoubleVector { //Можно сделать шаблонным
+class DoubleVector {
 public:
     class BasicIterator {
         friend class DoubleVector;
